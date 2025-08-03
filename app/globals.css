@@ -6,21 +6,52 @@
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-white: #fff;
+  --color-black: #000;
+  --color-headline: #002261; /* Professional dark blue headline */
+  --color-body: #636363; /* Subtle, readable body */
+  --color-primary: #10b981; /* Main green medical */
+  --color-primary-dark: #059669; /* Green for hover/active */
+  --color-accent: #2ea6f7; /* Optional blue accent */
+  /* --color-gray #e8edf0; Light gray background */
+  --color-border: #dddddd;
+  --font-heading: "Poppins", sans-serif;
+  --font-body: "Rubik", sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* @ */
+
+/* @layer utilities {
+  .button-primary {
+    background: var(--primary-color);
+    color: #fff;
+    font-family: var(--heading-font);
+    @apply py-3 px-18 rounded-full transition-all duration-300 text-lg font-rubik font-medium;
   }
+  .button-primary:hover {
+    background: var(--primary-color-dark);
+  }
+} */
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-poppins: var(--font-poppins); /* lowercase */
+  --font-rubik: var(--font-rubik); /* lowercase */
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Poppins, Rubik, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--color-headline);
+  font-family: var(--color-headline);
 }
