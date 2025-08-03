@@ -1,13 +1,13 @@
 "use client";
 
+import Image from "next/image";
 import DrAvijeetSlide from "@/components/DrAvijeetSlide";
 import DrPriyamvadaSlide from "@/components/DrPriyamvadaSlide";
 import DrRohitSlide from "@/components/DrRohitSlide";
 import DrSushilSlide from "@/components/DrSushilSlide";
-
 import { useEffect, useRef, useState } from "react";
 
-// Example backgrounds per doctor, adjust as needed
+// Background thumbnails for each doctor
 const backgrounds = ["/img/hero_slider_1.jpg", "/img/hero_slider_2.jpg", "/img/hero_slider_3.jpg"];
 
 const slides = [
@@ -37,15 +37,12 @@ const HeroSlider: React.FC = () => {
       {/* Slider Slides */}
       <div
         className='absolute inset-0 w-full h-full flex transition-transform duration-[1500ms]'
-        style={{
-          transform: `translateX(-${current * 100}vw)`,
-        }}>
-        {slides.map(({ content, img }, idx) => (
+        style={{ transform: `translateX(-${current * 100}vw)` }}>
+        {slides.map(({ content }, idx) => (
           <div
             key={idx}
             className='w-screen h-full flex items-center'
             style={{
-              // backgroundImage: `url(${img})`,
               backgroundSize: "cover",
               backgroundPosition: "center",
               flex: "0 0 100vw",
@@ -74,7 +71,13 @@ const HeroSlider: React.FC = () => {
               boxShadow: current === idx ? "0 4px 18px #287bff60" : "none",
             }}
             onClick={() => gotoSlide(idx)}>
-            <img src={slide.thumb} alt={`Doctor ${idx + 1}`} className='object-cover w-full h-full' />
+            <Image
+              src={slide.thumb}
+              alt={`Doctor ${idx + 1}`}
+              width={56}
+              height={56}
+              className='object-cover w-full h-full'
+            />
           </div>
         ))}
       </div>

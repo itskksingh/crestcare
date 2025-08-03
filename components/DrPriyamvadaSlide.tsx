@@ -10,8 +10,8 @@ const DrPriyamvadaSlide = () => (
           Women’s Health &<span className='text-primary '> Pregnancy</span> Care Expert
         </h1>
         <p className='font-rubik text-body text-lg lg:text-xl'>
-          Dr. Avijeet Prasad, MBBS, MS (Ortho), brings advanced orthopedic care to Giridih. From fractures to total
-          joint replacements, he’s known for delivering high success rates with modern, minimally invasive techniques.
+          Dr. Priyamvada, our consultant gynecologist, specializes in antenatal care, menstrual issues, and women’s
+          wellness. She provides a safe and supportive space for all your reproductive health needs.
         </p>
       </div>
       <div className='flex flex-col md:flex-row gap-4'>
