@@ -1,6 +1,7 @@
 "use client";
 
 import DrAvijeetSlide from "@/components/DrAvijeetSlide";
+import DrPriyamvadaSlide from "@/components/DrPriyamvadaSlide";
 import DrRohitSlide from "@/components/DrRohitSlide";
 import DrSushilSlide from "@/components/DrSushilSlide";
 
@@ -10,9 +11,10 @@ import { useEffect, useRef, useState } from "react";
 const backgrounds = ["/img/hero_slider_1.jpg", "/img/hero_slider_2.jpg", "/img/hero_slider_3.jpg"];
 
 const slides = [
-  { content: <DrSushilSlide />, img: backgrounds[0], thumb: backgrounds[0] },
-  { content: <DrRohitSlide />, img: backgrounds[1], thumb: backgrounds[1] },
-  { content: <DrAvijeetSlide />, img: backgrounds[2], thumb: backgrounds[2] },
+  { content: <DrSushilSlide />, thumb: backgrounds[0] },
+  { content: <DrRohitSlide />, thumb: backgrounds[1] },
+  { content: <DrAvijeetSlide />, thumb: backgrounds[2] },
+  { content: <DrPriyamvadaSlide />, thumb: backgrounds[2] },
 ];
 
 const HeroSlider: React.FC = () => {
