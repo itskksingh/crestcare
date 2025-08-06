@@ -2,6 +2,8 @@
 
 import Link from "next/link";
 import React from "react";
+import { FaAngleDoubleRight } from "react-icons/fa";
+
 
 type CustomLinkButtonProps = {
   href: string;
@@ -19,7 +21,7 @@ const CustomLinkButton: React.FC<CustomLinkButtonProps> = ({
   text,
   bgcolor = "bg-primary hover:bg-primary-dark",
   textColor = "text-white",
-  icon,
+  icon = <FaAngleDoubleRight />,
   className = "",
   target,
   rel,
